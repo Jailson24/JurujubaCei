@@ -1,0 +1,64 @@
+/* Fundo específico da página de Louvor */ body {background: url('./public/img/fundo-louvor.jpg') no-repeat center center/cover fixed;} /* Seção principal com efeito glass */ .conteudo-louvor {background: rgba(0, 0, 0, 0.6);backdrop-filter: blur(14px);-webkit-backdrop-filter: blur(14px);padding: 4rem 2rem;border-radius: 20px;max-width: 800px;margin: 6rem auto 4rem auto;text-align: center;box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);} .conteudo-louvor h1 {font-size: 3rem;margin-bottom: 1rem;} .conteudo-louvor p {font-size: 1.3rem;margin-bottom: 2.5rem;opacity: 0.9;} /* Botão voltar elegante */ .btn-voltar {display: inline-flex;align-items: center;gap: 0.5rem;padding: 12px 24px;background: linear-gradient(135deg, var(--secundario), var(--destaque));color: var(--branco);text-decoration: none;border-radius: 50px;box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);transition: all 0.4s ease;font-weight: 600;} .btn-voltar:hover {transform: translateY(-3px) scale(1.05);background: linear-gradient(135deg, var(--destaque), var(--secundario));box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);} /* Botão voltar ao topo */ #topBtn {position: fixed;bottom: 30px;right: 30px;display: none;background: linear-gradient(135deg, var(--secundario), var(--destaque));color: var(--branco);border: none;padding: 12px;border-radius: 50%;font-size: 1.4rem;cursor: pointer;box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);transition: all 0.3s ease;z-index: 1000;} #topBtn:hover {transform: scale(1.1);box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);} /* Estilo específico para a seção de Louvor e páginas de conteúdo */
+
+.conteudo-louvor {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.conteudo-louvor h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: var(--destaque);
+}
+
+.conteudo-louvor p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: var(--branco);
+  opacity: 0.9;
+}
+
+.conteudo-louvor ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.conteudo-louvor ul li {
+  background: rgba(255, 255, 255, 0.08);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.conteudo-louvor ul li:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+.btn-voltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, var(--secundario), var(--destaque));
+  color: var(--branco);
+  text-decoration: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-voltar:hover {
+  transform: translateY(-2px) scale(1.05);
+  background: linear-gradient(135deg, var(--destaque), var(--secundario));
+}

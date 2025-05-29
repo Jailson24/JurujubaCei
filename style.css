@@ -1,0 +1,272 @@
+/* =============================
+   AJUSTES DE RESPONSIVIDADE 2025 COM MELHORIA PARA iPAD E MENU
+   ============================= */
+
+@import url('variables.css');
+
+/* ==== Global ==== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--branco);
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: var(--fundo-escuro);
+  z-index: -1;
+}
+
+/* ==== Backgrounds por página ==== */
+body.pagina-inicio { background: url('./public/img/fundo.jpg') no-repeat center/cover fixed; }
+body.pagina-sobre { background: url('./public/img/fundo-sobre.jpg') no-repeat center/cover fixed; }
+body.pagina-louvor { background: url('./public/img/fundo-louvor.jpg') no-repeat center/cover fixed; }
+body.pagina-ministerios { background: url('./public/img/fundo-ministerios.jpg') no-repeat center/cover fixed; }
+body.pagina-midias { background: url('./public/img/fundo-midias.jpg') no-repeat center/cover fixed; }
+body.pagina-contato { background: url('./public/img/fundo-contato.jpg') no-repeat center/cover fixed; }
+
+/* ==== Logo ==== */
+.logo {
+  width: clamp(70px, 10vw, 120px);
+  height: auto;
+}
+
+/* ==== Header ==== */
+.sticky-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* ==== Menu Melhorado ==== */
+.menu-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  justify-content: center;
+}
+.menu-links li a {
+  color: var(--branco);
+  text-decoration: none;
+  padding: 10px 28px;
+  background: rgba(0, 123, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(14px) saturate(180%);
+  border-radius: 50px;
+  box-shadow: 0 4px 20px rgba(0,123,255,0.3);
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 1rem;
+  flex: 1 1 auto;
+  min-width: 110px;
+  text-align: center;
+}
+.menu-links li a:hover {
+  background: rgba(0, 123, 255, 0.35);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 24px rgba(0, 123, 255, 0.5);
+}
+.menu-links li a[aria-current="page"] {
+  background: var(--destaque);
+  color: var(--preto);
+  pointer-events: none;
+  cursor: default;
+}
+
+/* ==== Menu Mobile ==== */
+.menu-toggle { display: none; }
+.menu-icon { display: none; cursor: pointer; }
+
+@media (max-width: 1024px) {
+  .menu-links li a {
+    padding: 8px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-links {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(14px);
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .menu-toggle:checked + .menu-icon + nav .menu-links {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+  }
+  .menu-icon {
+    display: block;
+    color: var(--branco);
+    font-size: 1.8rem;
+  }
+  .menu-links li a {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+/* ==== Conteúdos ==== */
+.conteudo, .conteudo-louvor {
+  max-width: 1100px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(18px) saturate(180%);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .conteudo, .conteudo-louvor {
+    margin: 3rem auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .conteudo, .conteudo-louvor {
+    margin: 2rem auto;
+  }
+}
+
+/* ==== Textos ==== */
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-align: center;
+}
+p {
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* ==== Botões ==== */
+.btn, .btn-voltar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 12px 28px;
+  min-width: 140px;
+  background: rgba(0, 123, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(14px) saturate(180%);
+  border-radius: 50px;
+  color: var(--branco);
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(0, 123, 255, 0.3);
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.btn:hover, .btn-voltar:hover {
+  background: rgba(0, 123, 255, 0.35);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 32px rgba(0, 123, 255, 0.5);
+}
+.btn:active, .btn-voltar:active {
+  transform: scale(0.97);
+}
+
+@media (max-width: 1024px) {
+  .btn, .btn-voltar {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn, .btn-voltar {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* ==== Grupo de Botões ==== */
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* ==== Rodapé ==== */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(14px);
+  color: var(--branco);
+}
+
+/* ==== Botão Voltar ao Topo ==== */
+#topBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  background: rgba(0, 123, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(14px) saturate(180%);
+  color: var(--branco);
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+#topBtn:hover {
+  background: rgba(0, 123, 255, 0.35);
+  transform: scale(1.1);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.6);
+}
+
+/* ==== Acessibilidade ==== */
+a:focus-visible, button:focus-visible {
+  outline: 2px dashed var(--destaque);
+  outline-offset: 4px;
+}
+
+/* ==== Animações ==== */
+.fade-in-up {
+  animation: fadeInUp 0.8s ease forwards;
+}
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+body.fade-out {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}

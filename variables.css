@@ -1,0 +1,11 @@
+:root {
+  --primario: #1abc9c;
+  --secundario: #16a085;
+  --destaque: #007BFF; /* Azul metálico */
+  --branco: #ffffff;
+  --preto: #111111;
+  --fundo-escuro: rgba(0, 0, 0, 0.65);
+  --fundo-claro: #f5f5f5;
+  --texto-claro: #222222;
+  --sombra-suave: rgba(0, 0, 0, 0.15);
+}

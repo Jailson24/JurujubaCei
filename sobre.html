@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre nós - CEI</title>
+  <meta name="description" content="CEI de Jurujuba - Uma comunidade cristã comprometida com o amor, a fé e a transformação de vidas.">
+  <link rel="stylesheet" href="variables.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="./public/img/logo.png">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="pagina-sobre">
+  <header class="sticky-header">
+    <a href="index.html" class="logo-link" aria-label="Voltar para a página inicial">
+      <img src="./public/img/logo.png" alt="Logo da Comunidade Evangélica Integrada de Jurujuba" class="logo">
+    </a>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-icon" aria-label="Abrir menu"><i data-lucide="menu"></i></label>
+    <nav class="menu" role="navigation" aria-label="Menu principal">
+      <ul class="menu-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html" aria-current="page">Sobre nós</a></li>
+        <li><a href="louvor.html">Louvor</a></li>
+        <li><a href="ministerios.html">Ministérios</a></li>
+        <li><a href="midias.html">Mídias Sociais</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+    <button id="modeToggle" aria-label="Alternar modo claro e escuro">🌙</button>
+  </header>
+
+  <main class="conteudo fade-in-up">
+    <h1>Sobre nós</h1>
+    <p>Somos uma comunidade cristã comprometida com o amor, a fé e a transformação de vidas.</p>
+    <p>Nossa missão é levar a palavra de Deus, promover a comunhão e servir à comunidade de Jurujuba e além.</p>
+    <p>Seja muito bem-vindo(a) ao nosso site e à nossa família CEI!</p>
+  </main>
+
+  <footer>
+    <small class="direitos">
+      <p>© 2025 CEI de Jurujuba. Todos os direitos reservados.</p>
+    </small>
+  </footer>
+
+  <button id="topBtn" title="Voltar ao topo"><i data-lucide="arrow-up"></i></button>
+
+  <script src="script.js" defer></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

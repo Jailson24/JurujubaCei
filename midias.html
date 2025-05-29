@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mídias Sociais - CEI</title>
+  <meta name="description" content="Siga a CEI de Jurujuba nas redes sociais e acompanhe nossas atividades, eventos e mensagens.">
+  <link rel="stylesheet" href="variables.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="./public/img/logo.png">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="pagina-midias">
+  <header class="sticky-header">
+    <a href="index.html" class="logo-link" aria-label="Voltar para a página inicial">
+      <img src="./public/img/logo.png" alt="Logo da Comunidade Evangélica Integrada de Jurujuba" class="logo">
+    </a>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-icon" aria-label="Abrir menu"><i data-lucide="menu"></i></label>
+    <nav class="menu" role="navigation" aria-label="Menu principal">
+      <ul class="menu-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre nós</a></li>
+        <li><a href="louvor.html">Louvor</a></li>
+        <li><a href="ministerios.html">Ministérios</a></li>
+        <li><a href="midias.html" aria-current="page">Mídias Sociais</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+    <button id="modeToggle" aria-label="Alternar modo claro e escuro">🌙</button>
+  </header>
+  <main class="conteudo fade-in-up">
+    <h1>Nossas Mídias Sociais</h1>
+    <p>Acompanhe nossas atividades, eventos, cultos e mensagens através das nossas redes sociais:</p>
+    <div class="btn-group">
+      <a href="#" class="btn" aria-label="Acessar Facebook"><i data-lucide="facebook"></i> Facebook</a>
+      <a href="#" class="btn" aria-label="Acessar Instagram"><i data-lucide="instagram"></i> Instagram</a>
+      <a href="#" class="btn" aria-label="Acessar YouTube"><i data-lucide="youtube"></i> YouTube</a>
+    </div>
+  </main>
+  <footer>
+    <small class="direitos">
+      <p>© 2025 CEI de Jurujuba. Todos os direitos reservados.</p>
+    </small>
+  </footer>
+  <button id="topBtn" title="Voltar ao topo"><i data-lucide="arrow-up"></i></button>
+  <script src="script.js" defer></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

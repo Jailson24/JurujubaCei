@@ -22,7 +22,7 @@ body::before {
 body.pagina-inicio { background: url('./public/img/fundo.jpg') no-repeat center/cover fixed; }
 body.pagina-sobre { background: url('./public/img/fundo-sobre.jpg') no-repeat center/cover fixed; }
 body.pagina-louvor { background: url('./public/img/fundo-louvor.jpg') no-repeat center/cover fixed; }
-body.pagina-ministerios { background: url('./public/img/fundo-ministérios.jpg') no-repeat center/cover fixed; }
+body.pagina-ministerios { background: url('./public/img/fundo-ministerios.jpg') no-repeat center/cover fixed; }
 body.pagina-midias { background: url('./public/img/fundo-midias.jpg') no-repeat center/cover fixed; }
 body.pagina-contato { background: url('./public/img/fundo-contato.jpg') no-repeat center/cover fixed; }
 
